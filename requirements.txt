@@ -1,0 +1,13 @@
+# Backend & UI
+streamlit
+pydantic
+python-dotenv
+
+# PDF & OCR
+pymupdf
+
+
+# RAG & LLM
+faiss-cpu
+google-generativeai
+sentence-transformers
