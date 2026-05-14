@@ -13,28 +13,35 @@ Pearson AI is a document processing pipeline designed to convert messy legal sca
 ---
 
 ## 📁 Repository Structure
-```text
 pearson_project/
 ├── app/
+│   ├── __init__.py           # Makes 'app' a package
 │   ├── api/
-│        └── main.py            # Streamlit UI logic (main.py)
+│   │    ├── __init__.py      # Makes 'api' a package
+│   │    └── main.py          # Streamlit UI logic
 │   ├── drafting/
-│        └── geberator.py       # LLM Summary Generation (generator.py)
-│   ├── extraction
-│        └── parser.py          # Data harvesting (parser.py)        
+│   │    ├── __init__.py      # Makes 'drafting' a package
+│   │    └── generator.py     # LLM Summary Generation
+│   ├── extraction/
+│   │    ├── __init__.py      # Makes 'extraction' a package
+│   │    └── parser.py        # Data harvesting (Regex logic)
 │   ├── learning/ 
-│        └── feedback.py        # Feedback loop & JSONL management (feedback.py)
+│   │    ├── __init__.py      # Makes 'learning' a package
+│   │    └── feedback.py      # Feedback loop & JSONL management
 │   ├── ocr/ 
-│        └── engine.py          # OCR & Text Reconstruction (engine.py)
+│   │    ├── __init__.py      # Makes 'ocr' a package
+│   │    └── engine.py        # Strict OCR & Text Reconstruction
 │   └── retrieval/
-│        └──  vectordb.py       # Vector database & RAG (vectordb.py)
-├── data/                       # Storage for inputs, extractions, summaries
-│   ├── extracted
-│   ├── feedback
-│   ├── inputs
-│   └── summaries
-├── tests/                      # Unit tests for core processing
-└── requirements.txt            # Python dependencies
+│        ├── __init__.py      # Makes 'retrieval' a package
+│        └──  vectordb.py     # Vector database & FAISS RAG
+├── data/                     # Persistent storage (Git-ignored)
+│   ├── extracted/
+│   ├── feedback/
+│   ├── inputs/
+│   └── summaries/
+├── tests/                    # Unit tests for core processing
+├── requirements.txt          # Python library dependencies
+└── packages.txt              # System-level dependencies (tesseract-ocr)
 
 
 
