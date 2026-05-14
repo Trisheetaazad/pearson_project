@@ -34,7 +34,7 @@ pearson_project/
 │   └── retrieval/
 │        ├── __init__.py      # Makes 'retrieval' a package
 │        └──  vectordb.py     # Vector database & FAISS RAG
-├── data/                     # Persistent storage (Git-ignored)
+├── data/                     # Persistent storage
 │   ├── extracted/
 │   ├── feedback/
 │   ├── inputs/
