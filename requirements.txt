@@ -1,13 +1,11 @@
-# Backend & UI
 streamlit
 pydantic
 python-dotenv
-
-# PDF & OCR
 pymupdf
-
-
-# RAG & LLM
+pytesseract
+pillow
+groq
 faiss-cpu
 google-generativeai
 sentence-transformers
+python-dotenv
