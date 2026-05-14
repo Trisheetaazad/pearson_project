@@ -12,6 +12,7 @@ Pearson AI is a document processing pipeline designed to convert messy legal sca
 
 ---
 
+```text
 ## 📁 Repository Structure
 pearson_project/
 ├── app/
@@ -46,15 +47,34 @@ pearson_project/
 
 
 ⚙️ Setup & Instructions
+1. Local Environment Setup
+Run these commands in your terminal to prepare your local Linux environment:
 
-1. System Requirements
-Install the Tesseract OCR engine on your Linux machine:
-
-Bash
+```bash
+# Install the Tesseract OCR engine
 sudo apt update && sudo apt install tesseract-ocr -y
 
-2. Execution
-To launch the application, run the following command in your terminal:
+# Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
 
-Bash
+# Install Python dependencies
+pip install -r requirements.txt
+2. Execution
+To launch the application locally, use the following command:
+
+```bash
 python3 -m streamlit run app/api/main.py
+3. GitHub & Streamlit Cloud Deployment
+To deploy this project from GitHub to Streamlit Cloud, ensure your repository contains the following configuration files in the root directory:
+
+requirements.txt: Contains all Python libraries.
+
+packages.txt: Contains exactly one line: tesseract-ocr.
+
+.gitignore: Should include .env, __pycache__/, and data/ to keep your repo clean and secure.
+
+Streamlit Cloud Path:
+When deploying, set the Main file path to:
+
+app/api/main.py
