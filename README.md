@@ -43,7 +43,7 @@ pearson_project/
 ├── tests/                    # Unit tests for core processing
 ├── requirements.txt          # Python library dependencies
 └── packages.txt              # System-level dependencies (tesseract-ocr)
-
+```
 
 
 ⚙️ Setup & Instructions
@@ -64,11 +64,13 @@ pip install -r requirements.txt
 # Set up your API keys
 cp .env.example .env
 # Then open .env and fill in your GROQ_API_KEY and GEMINI_API_KEY
+```
 2. Execution
 To launch the application locally, use the following command:
 
 ```bash
 python3 -m streamlit run app/api/main.py
+```
 3. GitHub & Streamlit Cloud Deployment
 To deploy this project from GitHub to Streamlit Cloud, ensure your repository contains the following configuration files in the root directory:
 
