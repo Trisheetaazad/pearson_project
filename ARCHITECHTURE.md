@@ -20,4 +20,4 @@ The `app/utils/extraction.py` utility uses **Regular Expressions (Regex)** to ha
 Reconstructed text is split into semantic chunks and embedded using the **SentenceTransformers (`all-MiniLM-L6-v2`)** model. These embeddings are indexed in a **FAISS** vector database to enable precise fact-retrieval during the drafting stage.
 
 ### 5. Drafting & Learning Loop
-**Gemini 1.5 Flash** or **Llama 3.3** generates the final summaries. This stage utilizes **Few-Shot Learning**, injecting the three most recent human edits from `data/human_edits.jsonl` into the prompt to automatically mimic the user's preferred style and formatting. 
+**Gemini 2.5 Flash** or **Llama 3.3** generates the final summaries. This stage utilizes **Few-Shot Learning**, injecting the three most recent human edits from `data/human_edits.jsonl` into the prompt to automatically mimic the user's preferred style and formatting. 

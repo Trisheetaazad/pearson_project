@@ -60,6 +60,10 @@ source .venv/bin/activate
 
 # Install Python dependencies
 pip install -r requirements.txt
+
+# Set up your API keys
+cp .env.example .env
+# Then open .env and fill in your GROQ_API_KEY and GEMINI_API_KEY
 2. Execution
 To launch the application locally, use the following command:
 

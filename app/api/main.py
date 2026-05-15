@@ -91,7 +91,8 @@ if uploaded_files:
                         # Store in session state
                         st.session_state.results[uploaded_file.name] = {
                             "extracted": cleaned_text,
-                            "summary": summary
+                            "summary": summary,
+                            "evidence": context_chunks,   # retrieved passages that grounded the draft
                         }
                         
                         # Save initial summary file
@@ -122,6 +123,15 @@ if st.session_state.results:
                     height=400, 
                     key=f"src_{filename}"
                 )
+                # Show the retrieved passages that grounded the draft
+                with st.expander("📌 Retrieved Evidence (RAG chunks used for drafting)"):
+                    evidence = data.get("evidence", [])
+                    if evidence:
+                        for i, chunk in enumerate(evidence, 1):
+                            st.markdown(f"**Chunk {i}:**")
+                            st.info(chunk)
+                    else:
+                        st.write("No evidence recorded.")
 
             with col_right:
                 st.markdown("### 📝 Drafted Summary")
