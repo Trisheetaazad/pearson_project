@@ -7,7 +7,7 @@ Pearson AI is a document processing pipeline designed to convert messy legal sca
 ## 🛠️ Tech Stack
 - **Frontend:** [Streamlit](https://streamlit.io/)
 - **OCR Engine:** [Tesseract](https://github.com/tesseract-ocr/tesseract) & [PyMuPDF](https://pymupdf.readthedocs.io/)
-- **LLM Reasoning:** [Groq](https://groq.com/) (Llama 3.3 70B) & [Gemini 1.5 Flash](https://aistudio.google.com/)
+- **LLM Reasoning:** [Groq](https://groq.com/) (Llama 3.3 70B) & [Gemini 2.5 Flash](https://aistudio.google.com/)
 - **Vector Search:** [FAISS](https://github.com/facebookresearch/faiss) & [Sentence-Transformers](https://www.sbert.net/)
 
 ---
