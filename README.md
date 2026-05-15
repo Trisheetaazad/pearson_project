@@ -45,8 +45,13 @@ pearson_project/
 └── packages.txt              # System-level dependencies (tesseract-ocr)
 ```
 
+🌐 Live Deployment 
+The application is pre-configured and hosted on Streamlit Cloud with all required secure API credentials embedded.
+
+URL: https://pearsonproject-nv8uvficzqeaxt27lzwzcg.streamlit.app/
 
 ⚙️ Setup & Instructions
+
 1. Local Environment Setup
 Run these commands in your terminal to prepare your local Linux environment:
 
